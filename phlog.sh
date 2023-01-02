@@ -15,7 +15,7 @@ POSTDATE=`date "+%Y-%m-%d %H.%M"`
 POSTDIR=$PHLOG/$PHLOGDATEDIR
 GOPHERMAP2=$POSTDIR/gophermap
 if [[ ! -d "$GOPHERDIR" ]]; then
-  mkdir $GOPHERDIR && chmod 755 $GOPHERDIR
+  ln -sf /ftp/pub/users/$USER $GOPHERDIR && chmod 755 $GOPHERDIR
 else
   echo "Periksa direktori $GOPHERDIR" && ls -la $GOPHERDIR/
 fi
